@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Página - Módulo I - Primeiros Passos com HTML</title>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      background-color: #f4f6f8;
+      color: #222;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #1f3c88;
+      font-size: 2.2rem;
+    }
+
+    h2 {
+      margin-top: 35px;
+      color: #2855a6;
+      border-bottom: 2px solid #d7dce2;
+      padding-bottom: 6px;
+    }
+
+    h3 {
+      margin-top: 25px;
+      color: #374151;
+    }
+
+    h4,
+    h5,
+    h6 {
+      color: #4b5563;
+    }
+
+    p {
+      margin: 15px 0;
+      text-align: justify;
+    }
+
+    ul,
+    ol {
+      padding-left: 30px;
+      background-color: #fff;
+      border-radius: 8px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    a {
+      color: #175cd3;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    mark {
+      background-color: #ffe58a;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    strong {
+      color: #172554;
+    }
+
+    blockquote {
+      margin: 20px 0;
+      padding: 15px 20px;
+      border-left: 5px solid #2855a6;
+      background-color: #e8eef9;
+      color: #374151;
+      font-style: italic;
+      border-radius: 0 8px 8px 0;
+    }
+
+    hr {
+      margin: 30px 0;
+      border: 0;
+      border-top: 1px solid #d1d5db;
+    }
+
+    small {
+      color: #6b7280;
+    }
+
+    abbr {
+      cursor: help;
+      text-decoration: underline dotted;
+    }
+
+    del {
+      color: #b42318;
+    }
+
+    font {
+      font-weight: bold;
+    }
+
+    sub,
+    sup {
+      font-weight: bold;
+    }
+
+    body>p:last-child {
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 15px;
+        font-size: 15px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      ul,
+      ol {
+        padding-left: 25px;
+      }
+
+      blockquote {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1 id="inicio">Módulo I - Primeiros Passos com HTML</h1>
+
+  <hr>
+
+  <h2>Índice</h2>
+
+  <p>
+    Neste módulo aprendi conceitos básicos sobre a história dos computadores,
+    funcionamento de <i>clients</i> e <i>servers</i>, estrutura de documentos
+    HTML e diferenças entre listas.
+  </p>
+
+  <ul>
+    <li><a href="#historia">História dos computadores</a></li>
+    <li><a href="#clients">O que são <i>Clients</i>?</a></li>
+    <li><a href="#servers">O que são <i>Servers</i>?</a></li>
+    <li><a href="#html">Como é uma estrutura básica de um HTML?</a></li>
+    <li><a href="#listas">Diferença entre listas ordenadas e não ordenadas</a></li>
+    <li><a href="#referencias">Links de referências</a></li>
+  </ul>
+
+  <hr>
+
+  <h2 id="historia">História dos computadores</h2>
+
+  <p>
+    A história dos computadores começou muito antes dos computadores modernos.
+    Um dos instrumentos mais antigos utilizados para realizar cálculos foi o
+    <strong>ábaco</strong>.
+  </p>
+
+  <p>
+    Com o passar do tempo, surgiram máquinas cada vez mais sofisticadas.
+    Durante o século XX, os computadores passaram por uma grande evolução,
+    tornando-se menores, mais rápidos e acessíveis.
+  </p>
+
+  <p>
+    Atualmente, os computadores estão presentes em praticamente todas as áreas
+    da sociedade.
+    <mark>Computação e tecnologia fazem parte do nosso cotidiano.</mark>
+  </p>
+
+  <p>
+    Uma característica importante dessa evolução foi a redução do tamanho dos
+    componentes. Equipamentos que antes ocupavam salas inteiras hoje podem caber
+    na palma da mão.
+  </p>
+
+  <blockquote>
+    "O computador é uma ferramenta que amplia a capacidade humana de processar
+    informações."
+  </blockquote>
+
+  <p>
+    Para conhecer mais sobre a história da computação,
+    <a href="https://pt.wikipedia.org/wiki/Hist%C3%B3ria_da_computa%C3%A7%C3%A3o" target="_blank">
+      consulte este material.
+    </a>
+  </p>
+
+  <p>
+    <a href="#inicio">Voltar ao índice</a>
+  </p>
+
+  <hr>
+
+  <h2 id="clients">O que são <i>Clients</i>?</h2>
+
+  <p>
+    Em uma rede de computadores, um <strong>client</strong> é um dispositivo
+    ou programa que solicita algum serviço ou recurso a outro computador.
+  </p>
+
+  <p>
+    Um exemplo bastante comum é o navegador de internet. Quando acessamos um
+    site, o navegador funciona como um cliente ao fazer uma solicitação para
+    um servidor.
+  </p>
+
+  <p>
+    Podemos representar uma comunicação simples assim:
+  </p>
+
+  <ol>
+    <li>O usuário acessa um endereço no navegador.</li>
+    <li>O navegador envia uma solicitação.</li>
+    <li>O servidor recebe a solicitação.</li>
+    <li>O servidor processa a requisição.</li>
+    <li>O servidor devolve uma resposta ao cliente.</li>
+  </ol>
+
+  <p>
+    O termo
+    <abbr title="Hypertext Transfer Protocol">HTTP</abbr>
+    é utilizado para representar um dos principais protocolos envolvidos
+    na comunicação entre clientes e servidores na Web.
+  </p>
+
+  <p>
+    <small>
+      Exemplo: um navegador como Chrome ou Firefox pode atuar como cliente.
+    </small>
+  </p>
+
+  <p>
+    <a href="#inicio">Voltar ao índice</a>
+  </p>
+
+  <hr>
+
+  <h2 id="servers">O que são <i>Servers</i>?</h2>
+
+  <p>
+    Um <strong>server</strong>, ou servidor, é um computador ou sistema
+    responsável por disponibilizar recursos e serviços para outros dispositivos
+    conectados a uma rede.
+  </p>
+
+  <p>
+    Quando acessamos um site, normalmente o navegador envia uma solicitação
+    para um servidor. Esse servidor pode processar a solicitação e retornar
+    informações para o navegador.
+  </p>
+
+  <p>
+    Existem diferentes tipos de servidores. Alguns exemplos são:
+  </p>
+
+  <ul>
+    <li>Servidor Web;</li>
+    <li>Servidor de banco de dados;</li>
+    <li>Servidor de arquivos;</li>
+    <li>Servidor de e-mail.</li>
+  </ul>
+
+  <p>
+    Uma aplicação pode utilizar, por exemplo, um servidor para armazenar
+    informações e outro para disponibilizar uma página Web.
+  </p>
+
+  <p>
+    <font color="blue">
+      Cliente e servidor trabalham juntos para permitir a troca de
+      informações em uma rede.
+    </font>
+  </p>
+
+  <p>
+    <a href="#inicio">Voltar ao índice</a>
+  </p>
+
+  <hr>
+
+  <h2 id="html">Como é uma estrutura básica de um HTML?</h2>
+
+  <p>
+    Um documento <strong>HTML</strong> possui uma estrutura formada por
+    elementos e tags. A declaração
+    <mark>&lt;!DOCTYPE html&gt;</mark>
+    informa ao navegador que o documento utiliza HTML5.
+  </p>
+
+  <p>
+    A tag <strong>&lt;html&gt;</strong> representa o elemento raiz do documento.
+    Dentro dela normalmente encontramos as tags
+    <strong>&lt;head&gt;</strong> e <strong>&lt;body&gt;</strong>.
+  </p>
+
+  <p>
+    A seção <strong>&lt;head&gt;</strong> contém informações sobre o documento,
+    enquanto o <strong>&lt;body&gt;</strong> contém o conteúdo que será
+    apresentado ao usuário.
+  </p>
+
+  <h3>Exemplo de hierarquia</h3>
+
+  <ol>
+    <li>DOCTYPE</li>
+    <li>HTML</li>
+    <li>HEAD</li>
+    <li>BODY</li>
+  </ol>
+
+  <p>
+    Também podemos utilizar títulos de diferentes níveis:
+  </p>
+
+  <h4>Título de nível 4</h4>
+  <h5>Título de nível 5</h5>
+  <h6>Título de nível 6</h6>
+
+  <p>
+    Podemos escrever informações como H<sub>2</sub>O utilizando
+    <strong>&lt;sub&gt;</strong> e expressões matemáticas como
+    2<sup>3</sup> utilizando <strong>&lt;sup&gt;</strong>.
+  </p>
+
+  <p>
+    Algumas informações antigas podem ser apresentadas com
+    <del>texto removido</del>.
+  </p>
+
+  <p>
+    <a href="#inicio">Voltar ao índice</a>
+  </p>
+
+  <hr>
+
+  <h2 id="listas">
+    Entendendo a diferença entre listas ordenadas e não ordenadas
+  </h2>
+
+  <p>
+    As listas são utilizadas para organizar informações. Existem dois tipos
+    muito comuns em HTML: listas ordenadas e listas não ordenadas.
+  </p>
+
+  <h3>Lista não ordenada</h3>
+
+  <p>
+    A lista não ordenada é criada utilizando a tag
+    <strong>&lt;ul&gt;</strong>. Seus itens são representados pela tag
+    <strong>&lt;li&gt;</strong>.
+  </p>
+
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <h3>Lista ordenada</h3>
+
+  <p>
+    A lista ordenada utiliza a tag <strong>&lt;ol&gt;</strong>.
+    Os itens aparecem seguindo uma ordem numérica.
+  </p>
+
+  <ol>
+    <li>Aprender HTML</li>
+    <li>Aprender CSS</li>
+    <li>Aprender JavaScript</li>
+  </ol>
+
+  <p>
+    Portanto, a principal diferença é que a lista
+    <strong>ordenada</strong> representa uma sequência, enquanto a lista
+    <strong>não ordenada</strong> apresenta os itens sem uma ordem numérica
+    específica.
+  </p>
+
+  <p>
+    <a href="#inicio">Voltar ao índice</a>
+  </p>
+
+  <hr>
+
+  <h2 id="referencias">Links de referências</h2>
+
+  <p>
+    Estes são alguns sites que podem ajudar nos estudos de HTML e
+    desenvolvimento Web. Os links serão abertos em uma nova aba.
+  </p>
+
+  <ul>
+    <li>
+      <a href="https://www.w3.org/" target="_blank">
+        W3C - World Wide Web Consortium
+      </a>
+    </li>
+
+    <li>
+      <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
+        MDN Web Docs - HTML
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.dio.me/" target="_blank">
+        DIO
+      </a>
+    </li>
+  </ul>
+
+  <p>
+    <small>
+      Continue praticando e consultando a documentação sempre que surgir
+      alguma dúvida.
+    </small>
+  </p>
+
+  <p>
+    <a href="#inicio">Voltar ao início</a>
+  </p>
+
+</body>
+
+</html>
