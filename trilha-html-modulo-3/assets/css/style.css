@@ -1,0 +1,927 @@
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #202122;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+body {
+    min-width: 320px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #0645ad;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #36c;
+    outline-offset: 3px;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+h1,
+h2,
+h3 {
+    color: #202122;
+    line-height: 1.25;
+}
+
+h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+}
+
+h2 {
+    margin-top: 2rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid #a2a9b1;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.65rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #c8ccd1;
+    margin: 2rem 0;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.site-header {
+    background-color: #fff;
+}
+
+.header-content {
+    width: min(1440px, calc(100% - 2rem));
+    min-height: 90px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #202122;
+    flex-shrink: 0;
+}
+
+.brand:hover {
+    text-decoration: none;
+}
+
+.brand img {
+    width: 80px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.brand-text strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+.brand-text small {
+    color: #54595d;
+    font-size: 0.78rem;
+}
+
+.search-form {
+    width: min(500px, 100%);
+}
+
+.search-form > label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    width: 100%;
+    min-height: 40px;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #a2a9b1;
+    border-right: 0;
+    background-color: #fff;
+    color: #202122;
+    font: inherit;
+}
+
+.search-box button {
+    min-width: 100px;
+    border: 1px solid #a2a9b1;
+    background-color: #f8f9fa;
+    color: #202122;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.search-box button:hover {
+    background-color: #eaecf0;
+}
+
+.bar {
+    border-top: 1px solid #c8ccd1;
+    border-bottom: 1px solid #c8ccd1;
+    min-height: 10px;
+    background-color: #f8f9fa;
+}
+
+
+/* =========================================================
+   LAYOUT PRINCIPAL
+   ========================================================= */
+
+.page-layout {
+    width: min(1440px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "sidebar main anchors";
+    grid-template-columns:
+        minmax(180px, 15rem)
+        minmax(0, 1fr)
+        minmax(180px, 15rem);
+    gap: 2rem;
+    padding: 2rem 1.5rem 3rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    padding-right: 1.5rem;
+    border-right: 1px solid #c8ccd1;
+}
+
+.main {
+    grid-area: main;
+    min-width: 0;
+}
+
+.anchors {
+    grid-area: anchors;
+    padding-left: 1.5rem;
+    border-left: 1px solid #c8ccd1;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar nav {
+    margin-bottom: 2rem;
+}
+
+.sidebar h2,
+.anchors h2 {
+    margin-top: 0;
+    border-bottom: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.sidebar ul,
+.anchors ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar li {
+    margin: 0.35rem 0;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+}
+
+.sidebar li a:hover {
+    background-color: #eaecf0;
+    text-decoration: none;
+}
+
+.sidebar-box {
+    padding: 1rem;
+    border: 1px solid #c8ccd1;
+    background-color: #f8f9fa;
+    font-size: 0.9rem;
+}
+
+.sidebar-box h2 {
+    margin-bottom: 0.75rem;
+}
+
+
+/* =========================================================
+   CABEÇALHO DO ARTIGO
+   ========================================================= */
+
+.article-header {
+    margin-bottom: 2rem;
+}
+
+.breadcrumb {
+    margin-bottom: 1rem;
+    color: #54595d;
+    font-size: 0.85rem;
+}
+
+.breadcrumb span {
+    margin: 0 0.4rem;
+    color: #72777d;
+}
+
+.subtitle {
+    margin-top: 0.5rem;
+    color: #54595d;
+    font-size: 1.05rem;
+}
+
+.article-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.article-actions button,
+.form-actions button {
+    padding: 0.5rem 0.9rem;
+    border: 1px solid #a2a9b1;
+    border-radius: 2px;
+    background-color: #f8f9fa;
+    color: #202122;
+    cursor: pointer;
+    font: inherit;
+}
+
+.article-actions button:first-child {
+    background-color: #fff;
+}
+
+.article-actions button:hover,
+.form-actions button:hover {
+    background-color: #eaecf0;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.main > section {
+    margin-bottom: 2.5rem;
+}
+
+.main > section:first-of-type h2 {
+    margin-top: 0;
+}
+
+.main figure {
+    margin: 2rem auto;
+}
+
+.main-figure {
+    width: min(100%, 650px);
+    padding: 0.5rem;
+    border: 1px solid #c8ccd1;
+    background-color: #f8f9fa;
+}
+
+.main-figure img {
+    display: block;
+    width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+    background-color: #fff;
+}
+
+.main-figure figcaption {
+    padding: 0.75rem 0.5rem 0.25rem;
+    color: #54595d;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+
+/* =========================================================
+   CAIXA DE INFORMAÇÕES
+   ========================================================= */
+
+.info-box {
+    padding: 0 1rem 1rem;
+    border: 1px solid #a2a9b1;
+    background-color: #f8f9fa;
+}
+
+.info-box h2 {
+    margin-top: 0;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #a2a9b1;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.info-box dl {
+    display: grid;
+    grid-template-columns: minmax(130px, 0.8fr) 1.5fr;
+    margin: 0;
+}
+
+.info-box dt,
+.info-box dd {
+    padding: 0.45rem 0;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.info-box dt {
+    font-weight: 700;
+}
+
+.info-box dd {
+    margin: 0;
+}
+
+
+/* =========================================================
+   NOTAS E DESTAQUES
+   ========================================================= */
+
+.note {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #36c;
+    background-color: #f8f9fa;
+}
+
+.note h3 {
+    margin-top: 0;
+}
+
+blockquote {
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #72777d;
+    background-color: #f8f9fa;
+    color: #54595d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+}
+
+blockquote p {
+    margin-bottom: 0.5rem;
+}
+
+blockquote footer {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.85rem;
+}
+
+mark {
+    padding: 0 0.15rem;
+    background-color: #fff3a3;
+}
+
+
+/* =========================================================
+   CÓDIGO
+   ========================================================= */
+
+pre {
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    overflow-x: auto;
+    border: 1px solid #c8ccd1;
+    border-radius: 3px;
+    background-color: #f8f9fa;
+    color: #202122;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.4;
+}
+
+code {
+    font-family: "Courier New", Courier, monospace;
+}
+
+
+/* =========================================================
+   DETAILS / SUMMARY
+   ========================================================= */
+
+details {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border: 1px solid #c8ccd1;
+    background-color: #f8f9fa;
+}
+
+summary {
+    cursor: pointer;
+    color: #0645ad;
+    font-weight: 600;
+}
+
+details[open] summary {
+    margin-bottom: 1rem;
+}
+
+
+/* =========================================================
+   LINHA DO TEMPO
+   ========================================================= */
+
+.timeline {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.timeline li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+}
+
+.timeline time {
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TABELA
+   ========================================================= */
+
+table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+caption {
+    margin-bottom: 0.75rem;
+    color: #54595d;
+    font-weight: 600;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border: 1px solid #a2a9b1;
+    text-align: left;
+    vertical-align: top;
+}
+
+thead th {
+    background-color: #eaecf0;
+}
+
+tbody th {
+    background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #f8f9fa;
+}
+
+
+/* =========================================================
+   CURIOSIDADES
+   ========================================================= */
+
+.curiosity {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #c8ccd1;
+    border-radius: 3px;
+}
+
+.curiosity h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.curiosity p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   GLOSSÁRIO
+   ========================================================= */
+
+#glossario dl {
+    margin: 1.5rem 0;
+}
+
+#glossario dt {
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+#glossario dd {
+    margin-left: 1.5rem;
+    color: #54595d;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+fieldset {
+    margin: 0;
+    padding: 1.5rem;
+    border: 1px solid #a2a9b1;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: 700;
+}
+
+fieldset label {
+    display: block;
+    margin: 1rem 0 0.35rem;
+    font-weight: 600;
+}
+
+fieldset input[type="text"],
+fieldset input[type="email"],
+fieldset textarea {
+    width: 100%;
+    padding: 0.65rem;
+    border: 1px solid #a2a9b1;
+    background-color: #fff;
+    color: #202122;
+    font: inherit;
+}
+
+fieldset input[type="range"] {
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+fieldset textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+}
+
+
+/* =========================================================
+   ÍNDICE LATERAL
+   ========================================================= */
+
+.anchors {
+    font-size: 0.9rem;
+}
+
+.anchors ol {
+    padding-left: 1.5rem;
+    list-style: decimal;
+}
+
+.anchors li {
+    margin-bottom: 0.45rem;
+}
+
+.progress-box,
+.status-box {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #c8ccd1;
+    background-color: #f8f9fa;
+}
+
+.progress-box h2,
+.status-box h2 {
+    margin-bottom: 0.75rem;
+}
+
+.progress-box p,
+.status-box p {
+    margin-bottom: 0.5rem;
+}
+
+progress,
+meter {
+    width: 100%;
+    height: 1rem;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.footer {
+    border-top: 1px solid #c8ccd1;
+    background-color: #f8f9fa;
+}
+
+.footer-content {
+    width: min(1440px, calc(100% - 3rem));
+    margin: 0 auto;
+    padding: 2.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-content h2 {
+    margin-top: 0;
+    border-bottom: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.footer-content ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.footer address,
+.footer .copyright {
+    width: min(1440px, calc(100% - 3rem));
+    margin-left: auto;
+    margin-right: auto;
+    color: #54595d;
+    font-size: 0.85rem;
+}
+
+.footer address {
+    font-style: normal;
+}
+
+.footer .copyright {
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLETS
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .page-layout {
+        grid-template-areas:
+            "sidebar main"
+            "anchors anchors";
+        grid-template-columns:
+            200px
+            minmax(0, 1fr);
+    }
+
+    .anchors {
+        padding: 1.5rem 0 0;
+        border-top: 1px solid #c8ccd1;
+        border-left: 0;
+    }
+
+    .anchors nav ol {
+        columns: 2;
+    }
+
+    .progress-box,
+    .status-box {
+        display: inline-block;
+        width: calc(50% - 0.75rem);
+        margin-right: 0.5rem;
+        vertical-align: top;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .header-content {
+        width: calc(100% - 2rem);
+        min-height: auto;
+        padding: 1rem 0;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+
+    .page-layout {
+        width: calc(100% - 2rem);
+        padding: 1.5rem 0 2rem;
+        display: block;
+    }
+
+    .sidebar,
+    .anchors {
+        padding: 0;
+        border: 0;
+    }
+
+    .sidebar {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #c8ccd1;
+    }
+
+    .sidebar nav {
+        margin-bottom: 1rem;
+    }
+
+    .sidebar ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.25rem 0.5rem;
+    }
+
+    .main {
+        margin-bottom: 2rem;
+    }
+
+    .anchors {
+        padding-top: 1.5rem;
+        border-top: 1px solid #c8ccd1;
+    }
+
+    .anchors nav ol {
+        columns: 1;
+    }
+
+    .info-box dl {
+        grid-template-columns: 1fr;
+    }
+
+    .info-box dt {
+        padding-bottom: 0.1rem;
+        border-bottom: 0;
+    }
+
+    .info-box dd {
+        padding-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .progress-box,
+    .status-box {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .footer-content {
+        width: calc(100% - 2rem);
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2rem 0;
+    }
+
+    .footer address,
+    .footer .copyright {
+        width: calc(100% - 2rem);
+    }
+}
+
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
+/* =========================================================
+   IMPRESSÃO
+   ========================================================= */
+
+@media print {
+
+    .search-form,
+    .article-actions,
+    .sidebar,
+    .anchors,
+    .feedback,
+    .footer {
+        display: none;
+    }
+
+    .page-layout {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    h1,
+    h2,
+    h3 {
+        break-after: avoid;
+    }
+
+    figure,
+    table,
+    blockquote {
+        break-inside: avoid;
+    }
+}
