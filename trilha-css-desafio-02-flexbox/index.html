@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YouTube - Assistindo Vídeo</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="header">
+
+    <!-- Área esquerda -->
+    <div class="header-left">
+
+      <button class="icon-button menu-button" aria-label="Menu">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      </button>
+
+      <a href="#" class="youtube-logo" aria-label="YouTube">
+        <svg class="youtube-symbol" viewBox="0 0 90 24">
+          <rect x="0" y="3" width="29" height="18" rx="5" fill="#FF0000" />
+          <path d="M12 7.5L20 12L12 16.5V7.5Z" fill="#FFFFFF" />
+
+          <text x="32" y="19" font-family="Arial, sans-serif" font-size="20" font-weight="700"
+            fill="#000000">YouTube</text>
+        </svg>
+      </a>
+
+    </div>
+
+    <!-- Área central: pesquisa -->
+    <div class="header-center">
+
+      <form class="search-form">
+
+        <input type="search" class="search-input" aria-label="Pesquisar">
+
+        <button type="submit" class="search-button" aria-label="Pesquisar">
+          <svg viewBox="0 0 24 24">
+            <circle cx="10.8" cy="10.8" r="8.2" />
+            <path d="m17 17 5 5" />
+          </svg>
+        </button>
+
+      </form>
+
+    </div>
+
+    <!-- Área direita -->
+    <div class="header-right">
+
+      <button class="icon-button" aria-label="Criar vídeo">
+        <svg viewBox="0 0 24 24">
+          <rect x="2" y="5" width="15" height="14" rx="2" />
+          <path d="m17 10 5-3v10l-5-3" />
+        </svg>
+      </button>
+
+      <button class="icon-button" aria-label="Notificações">
+        <svg viewBox="0 0 24 24">
+          <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9" />
+          <path d="M10 21h4" />
+        </svg>
+      </button>
+
+      <button class="profile-button" aria-label="Perfil">
+        <span class="profile-avatar">ME</span>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- Conteúdo da página -->
+  <main class="page-content">
+
+    <!-- Área de visualização do vídeo -->
+    <section class="watching-video">
+
+      <!-- Player -->
+      <div class="video-player">
+
+        <div class="dio-logo">
+          <span class="dio-symbol">
+            <span class="dio-shape dio-shape-one"></span>
+            <span class="dio-shape dio-shape-two"></span>
+            <span class="dio-shape dio-shape-three"></span>
+          </span>
+
+          <span class="dio-text">.me_</span>
+        </div>
+
+      </div>
+
+
+      <!-- Título -->
+      <h1 class="video-title">
+        Semana Front-end | Dia 01: Construindo uma Landing Page no
+        Mundo Invertido com HTML e CSS
+      </h1>
+
+
+      <!-- Informações e ações -->
+      <div class="video-actions">
+
+        <!-- Informações do canal -->
+        <div class="channel-info">
+
+          <div class="channel-avatar">
+            <span class="channel-avatar-symbol">D</span>
+            <span class="channel-avatar-dot"></span>
+          </div>
+
+          <div class="channel-details">
+            <span class="channel-name">DIO</span>
+            <span class="channel-subscribers">
+              83,3 mil inscritos
+            </span>
+          </div>
+
+        </div>
+
+
+        <!-- Inscrição -->
+        <button class="subscribe-button">
+          INSCREVA-SE
+        </button>
+
+
+        <!-- Curtidas -->
+        <button class="action-button like-button">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M7 10v11H3V10h4Z" />
+            <path d="M7 10l5-8c2 0 3 2 2 4l-1 4h7a2 2 0 0 1 2 2l-2 7a2 2 0 0 1-2 2H7" />
+          </svg>
+
+          <span>2 mil</span>
+
+        </button>
+
+
+        <!-- Não gostei -->
+        <button class="action-button dislike-button">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M7 14V3H3v11h4Z" />
+            <path d="M7 14l5 8c2 0 3-2 2-4l-1-4h7a2 2 0 0 0 2-2l-2-7a2 2 0 0 0-2-2H7" />
+          </svg>
+
+          <span>Não gostei</span>
+
+        </button>
+
+
+        <!-- Compartilhar -->
+        <button class="action-button share-button">
+
+          <svg viewBox="0 0 24 24">
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+
+            <path d="m8.7 10.5 6.6-4" />
+            <path d="m8.7 13.5 6.6 4" />
+          </svg>
+
+          <span>Compartilhar</span>
+
+        </button>
+
+
+        <!-- Download -->
+        <button class="action-button download-button">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3v12" />
+            <path d="m7 10 5 5 5-5" />
+            <path d="M4 17v4h16v-4" />
+          </svg>
+
+          <span>Download</span>
+
+        </button>
+
+      </div>
+
+
+      <!-- Descrição -->
+      <div class="video-description">
+
+        <p class="video-views">
+          28.418 visualizações
+          Transmitido ao vivo em 23 ago. de 2022
+        </p>
+
+        <p class="video-description-text">
+          Inicie uma aventura imersiva no mundo do Front-end com
+          HTML e CSS. Para isso, criaremos uma landing page com a
+          temática da série Stranger Things, a qual contará com a
+          implementação de um theme switcher (light e dark) para
+          explorarmos os mistérios do mundo invertido.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Barra lateral de vídeos recomendados -->
+    <aside class="sidebar">
+
+      <!-- Vídeo 1 -->
+      <article class="recommended-video">
+
+        <div class="thumbnail thumbnail-data">
+
+          <div class="thumbnail-brand">DIO.</div>
+
+          <div class="thumbnail-content">
+            <span>Ciência de dados</span>
+            <strong>Unimed - BH</strong>
+          </div>
+
+          <div class="thumbnail-python">PYTHON</div>
+
+        </div>
+
+        <div class="recommended-info">
+
+          <h2>
+            Geração Tech Unimed - BH - Ciência de Dados
+          </h2>
+
+          <p class="recommended-channel">
+            DigitalInnovationOne
+          </p>
+
+          <p class="recommended-stats">
+            2,1 mil visualizações<br>
+            Transmitido há 2 dias
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- Vídeo 2 -->
+      <article class="recommended-video">
+
+        <div class="thumbnail thumbnail-scrum">
+
+          <div class="thumbnail-brand">DIO.</div>
+
+          <div class="thumbnail-content">
+            <span>Scrum Talks</span>
+            <strong>Aprenda na prática</strong>
+          </div>
+
+          <div class="thumbnail-person">👩🏻‍💻</div>
+
+        </div>
+
+        <div class="recommended-info">
+
+          <h2>Scrum Talks</h2>
+
+          <p class="recommended-channel">
+            DigitalInnovationOne
+          </p>
+
+          <p class="recommended-stats">
+            1,6 mil visualizações<br>
+            Transmitido há 3 dias
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- Vídeo 3 -->
+      <article class="recommended-video">
+
+        <div class="thumbnail thumbnail-machine">
+
+          <div class="thumbnail-brand">DIO.</div>
+
+          <div class="thumbnail-content">
+            <span>Especialista Machine Learning</span>
+            <strong>Machine Learning Avançado</strong>
+          </div>
+
+          <div class="thumbnail-people">
+            <span>👨🏻</span>
+            <span>👨🏼</span>
+            <span>👩🏻</span>
+          </div>
+
+        </div>
+
+        <div class="recommended-info">
+
+          <h2>
+            Machine Learning Avançado - Fast Track
+          </h2>
+
+          <p class="recommended-channel">
+            DigitalInnovationOne
+          </p>
+
+          <p class="recommended-stats">
+            1,7 mil visualizações<br>
+            Transmitido há 4 dias
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- Vídeo 4 -->
+      <article class="recommended-video">
+
+        <div class="thumbnail thumbnail-planning">
+
+          <div class="thumbnail-brand">DIO.</div>
+
+          <div class="thumbnail-content">
+            <span>Global Skills</span>
+            <strong>PROJECT PLANNING</strong>
+          </div>
+
+          <div class="planning-decoration"></div>
+
+        </div>
+
+        <div class="recommended-info">
+
+          <h2>
+            Global Skills #2 - Project Planning
+          </h2>
+
+          <p class="recommended-channel">
+            DigitalInnovationOne
+          </p>
+
+          <p class="recommended-stats">
+            971 visualizações<br>
+            Transmitido há 5 dias
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- Vídeo 5 -->
+      <article class="recommended-video">
+
+        <div class="thumbnail thumbnail-python">
+
+          <div class="thumbnail-brand">DIO.</div>
+
+          <div class="thumbnail-content">
+            <span>🐍 Python</span>
+            <strong>COMO APRENDER PYTHON DO ZERO</strong>
+          </div>
+
+          <div class="python-person">👨🏻‍💻</div>
+
+        </div>
+
+        <div class="recommended-info">
+
+          <h2>
+            Como aprender a programar Python do ZERO
+          </h2>
+
+          <p class="recommended-channel">
+            DigitalInnovationOne
+          </p>
+
+          <p class="recommended-stats">
+            711 visualizações<br>
+            Transmitido há 6 dias
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- Vídeo 6 -->
+      <article class="recommended-video">
+
+        <div class="thumbnail thumbnail-data">
+
+          <div class="thumbnail-brand">DIO.</div>
+
+          <div class="thumbnail-content">
+            <span>Ciência de dados</span>
+            <strong>Unimed - BH</strong>
+          </div>
+
+          <div class="thumbnail-python">PYTHON</div>
+
+        </div>
+
+        <div class="recommended-info">
+
+          <h2>
+            Geração Tech Unimed - BH - Ciência de Dados
+          </h2>
+
+          <p class="recommended-channel">
+            DigitalInnovationOne
+          </p>
+
+          <p class="recommended-stats">
+            2,1 mil visualizações<br>
+            Transmitido há 2 dias
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- Vídeo 7 -->
+      <article class="recommended-video">
+
+        <div class="thumbnail thumbnail-scrum">
+
+          <div class="thumbnail-brand">DIO.</div>
+
+          <div class="thumbnail-content">
+            <span>Scrum Talks</span>
+            <strong>Aprenda na prática</strong>
+          </div>
+
+          <div class="thumbnail-person">👩🏻‍💻</div>
+
+        </div>
+
+        <div class="recommended-info">
+
+          <h2>Scrum Talks</h2>
+
+          <p class="recommended-channel">
+            DigitalInnovationOne
+          </p>
+
+          <p class="recommended-stats">
+            1,6 mil visualizações<br>
+            Transmitido há 3 dias
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- Vídeo 8 -->
+      <article class="recommended-video">
+
+        <div class="thumbnail thumbnail-machine">
+
+          <div class="thumbnail-brand">DIO.</div>
+
+          <div class="thumbnail-content">
+            <span>Especialista Machine Learning</span>
+            <strong>Machine Learning Avançado</strong>
+          </div>
+
+          <div class="thumbnail-people">
+            <span>👨🏻</span>
+            <span>👨🏼</span>
+            <span>👩🏻</span>
+          </div>
+
+        </div>
+
+        <div class="recommended-info">
+
+          <h2>
+            Machine Learning Avançado - Fast Track
+          </h2>
+
+          <p class="recommended-channel">
+            DigitalInnovationOne
+          </p>
+
+          <p class="recommended-stats">
+            1,7 mil visualizações<br>
+            Transmitido há 4 dias
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- Vídeo 9 -->
+      <article class="recommended-video">
+
+        <div class="thumbnail thumbnail-planning">
+
+          <div class="thumbnail-brand">DIO.</div>
+
+          <div class="thumbnail-content">
+            <span>Global Skills</span>
+            <strong>PROJECT PLANNING</strong>
+          </div>
+
+          <div class="planning-decoration"></div>
+
+        </div>
+
+        <div class="recommended-info">
+
+          <h2>
+            Global Skills #2 - Project Planning
+          </h2>
+
+          <p class="recommended-channel">
+            DigitalInnovationOne
+          </p>
+
+          <p class="recommended-stats">
+            971 visualizações<br>
+            Transmitido há 5 dias
+          </p>
+
+        </div>
+
+      </article>
+
+    </aside>
+
+  </main>
+
+</body>
+
+</html>

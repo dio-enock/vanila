@@ -1,0 +1,1116 @@
+/* ==============================
+   RESET E CONFIGURAÇÕES GERAIS
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #f9f9f9;
+    --white: #ffffff;
+    --black: #000000;
+    --text-primary: #0f0f0f;
+    --text-secondary: #515151;
+    --border: #cccccc;
+    --youtube-red: #cc0000;
+}
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+.header {
+    width: 100%;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 24px;
+    gap: 32px;
+
+    background-color: var(--white);
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+/* Área esquerda */
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    flex: 1;
+    min-width: 146px;
+}
+
+.icon-button {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--black);
+    flex-shrink: 0;
+}
+
+.icon-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.menu-button svg {
+    stroke-width: 2;
+}
+
+.youtube-logo {
+    width: 90px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.youtube-symbol {
+    width: 90px;
+    height: 24px;
+
+    stroke: none;
+}
+
+
+/* Área central */
+
+.header-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+    max-width: 404px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 40px;
+}
+
+.search-input {
+    width: 100%;
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid var(--border);
+    border-right: none;
+
+    border-radius: 0;
+    outline: none;
+
+    background-color: var(--white);
+
+    font-size: 16px;
+}
+
+.search-input:focus {
+    border-color: #1c62b9;
+}
+
+.search-button {
+    width: 57px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid var(--border);
+    background-color: #f8f8f8;
+}
+
+.search-button:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Área direita */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 24px;
+
+    flex: 1;
+    min-width: 130px;
+}
+
+.profile-button {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.profile-avatar {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #5b347e, #e2a3a3);
+
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+============================== */
+
+.page-content {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 28px;
+
+    padding: 28px 24px 40px 5.2%;
+}
+
+
+/* ==============================
+   ÁREA DO VÍDEO
+============================== */
+
+.watching-video {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 16px;
+
+    flex: 1;
+    min-width: 0;
+    max-width: 952px;
+}
+
+
+/* Player */
+
+.video-player {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background-color: #000000;
+    overflow: hidden;
+}
+
+
+/* Logo DIO do player */
+
+.dio-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 20px;
+
+    color: #f1f1f1;
+}
+
+.dio-symbol {
+    width: 142px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    position: relative;
+}
+
+.dio-shape {
+    display: block;
+    background-color: #f1f1f1;
+}
+
+.dio-shape-one {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50% 0 50% 50%;
+
+    transform: rotate(180deg);
+}
+
+.dio-shape-two {
+    width: 22px;
+    height: 54px;
+
+    border-radius: 12px;
+}
+
+.dio-shape-three {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+}
+
+.dio-text {
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+
+/* ==============================
+   TÍTULO DO VÍDEO
+============================== */
+
+.video-title {
+    width: 100%;
+
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+
+    color: var(--text-primary);
+}
+
+
+/* ==============================
+   AÇÕES DO VÍDEO
+============================== */
+
+.video-actions {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+}
+
+
+/* Informações do canal */
+
+.channel-info {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+.channel-avatar {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    background: linear-gradient(135deg, #090909, #292929);
+}
+
+.channel-avatar-symbol {
+    color: #ffffff;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    font-style: italic;
+}
+
+.channel-avatar-dot {
+    width: 9px;
+    height: 9px;
+
+    position: absolute;
+    right: 7px;
+    bottom: 9px;
+
+    border-radius: 50%;
+
+    background-color: #ff004f;
+}
+
+.channel-details {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.channel-name {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+
+    color: var(--black);
+}
+
+.channel-subscribers {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+
+    color: var(--text-secondary);
+}
+
+
+/* Botão de inscrição */
+
+.subscribe-button {
+    min-width: 159px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 16px;
+
+    flex-shrink: 0;
+
+    background-color: var(--youtube-red);
+    color: var(--white);
+
+    border-radius: 2px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.subscribe-button:hover {
+    background-color: #b00000;
+}
+
+
+/* Botões de ação */
+
+.action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    height: 40px;
+
+    color: var(--black);
+
+    white-space: nowrap;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    flex-shrink: 0;
+}
+
+.action-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.like-button {
+    gap: 8px;
+}
+
+.dislike-button {
+    gap: 8px;
+}
+
+.share-button {
+    gap: 8px;
+}
+
+.download-button {
+    gap: 8px;
+}
+
+
+/* ==============================
+   DESCRIÇÃO DO VÍDEO
+============================== */
+
+.video-description {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 16px;
+}
+
+.video-views {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+
+    color: var(--black);
+}
+
+.video-description-text {
+    max-width: 510px;
+
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+
+    color: var(--text-secondary);
+}
+
+
+/* ==============================
+   BARRA LATERAL
+============================== */
+
+.sidebar {
+    width: 100%;
+    max-width: 365px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    flex-shrink: 0;
+}
+
+
+/* Cada vídeo recomendado */
+
+.recommended-video {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 16px;
+}
+
+
+/* ==============================
+   MINIATURAS
+============================== */
+
+.thumbnail {
+    width: 160px;
+    height: 90px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+
+    padding: 8px;
+
+    color: #ffffff;
+}
+
+
+/* Marca DIO */
+
+.thumbnail-brand {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+/* Conteúdo das miniaturas */
+
+.thumbnail-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 3px;
+
+    position: relative;
+    z-index: 1;
+
+    max-width: 125px;
+}
+
+.thumbnail-content span {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 400;
+}
+
+.thumbnail-content strong {
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 700;
+}
+
+
+/* Miniatura 1: Ciência de dados */
+
+.thumbnail-data {
+    background:
+        radial-gradient(circle at 75% 50%, #075c26 0, #00310f 35%, transparent 36%),
+        linear-gradient(120deg, #061b12, #001004);
+}
+
+.thumbnail-data::after {
+    content: "";
+
+    width: 48px;
+    height: 62px;
+
+    position: absolute;
+    right: 12px;
+    bottom: 6px;
+
+    border: 3px solid #23c55e;
+    border-radius: 12px 12px 20px 20px;
+
+    transform: rotate(12deg);
+}
+
+.thumbnail-data .thumbnail-python {
+    position: absolute;
+    right: 14px;
+    bottom: 27px;
+
+    z-index: 1;
+
+    padding: 3px;
+
+    background-color: #ffffff;
+    color: #111111;
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+
+/* Miniatura 2: Scrum */
+
+.thumbnail-scrum {
+    background:
+        linear-gradient(110deg, #0759bd, #1265e6 55%, #8154d8);
+}
+
+.thumbnail-scrum .thumbnail-content {
+    margin-top: 15px;
+}
+
+.thumbnail-person {
+    position: absolute;
+    right: 8px;
+    bottom: 3px;
+
+    font-size: 38px;
+}
+
+
+/* Miniatura 3: Machine Learning */
+
+.thumbnail-machine {
+    background:
+        linear-gradient(130deg, #050505 0%, #111111 55%, #292929 100%);
+}
+
+.thumbnail-machine .thumbnail-content {
+    max-width: 105px;
+    margin-top: 10px;
+}
+
+.thumbnail-machine .thumbnail-content strong {
+    font-size: 12px;
+}
+
+.thumbnail-people {
+    display: flex;
+    align-items: center;
+
+    gap: 2px;
+
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+.thumbnail-people span {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #f0f0f0;
+
+    font-size: 15px;
+}
+
+
+/* Miniatura 4: Project Planning */
+
+.thumbnail-planning {
+    background:
+        linear-gradient(120deg, #101b26, #48616d 60%, #a7b5b5);
+}
+
+.thumbnail-planning .thumbnail-content {
+    margin-top: 12px;
+}
+
+.thumbnail-planning .thumbnail-content span {
+    padding: 2px 5px;
+
+    border-radius: 3px;
+
+    background-color: #b2d72a;
+    color: #111111;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.thumbnail-planning .thumbnail-content strong {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.planning-decoration {
+    width: 65px;
+    height: 35px;
+
+    position: absolute;
+    right: -5px;
+    bottom: 5px;
+
+    border-radius: 5px;
+
+    background: linear-gradient(135deg, #e5e5e5, #89979e);
+
+    transform: rotate(-20deg);
+}
+
+
+/* Miniatura 5: Python */
+
+.thumbnail-python {
+    background:
+        linear-gradient(110deg, #101629, #111a38 65%, #292347);
+}
+
+.thumbnail-python .thumbnail-content {
+    margin-top: 12px;
+    max-width: 110px;
+}
+
+.thumbnail-python .thumbnail-content strong {
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.python-person {
+    position: absolute;
+    right: 7px;
+    bottom: 3px;
+
+    font-size: 36px;
+}
+
+
+/* ==============================
+   INFORMAÇÕES DOS RECOMENDADOS
+============================== */
+
+.recommended-info {
+    min-width: 0;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 8px;
+}
+
+.recommended-info h2 {
+    width: 100%;
+
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+
+    color: var(--text-primary);
+}
+
+.recommended-channel {
+    width: 100%;
+
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+
+    color: var(--text-secondary);
+}
+
+.recommended-stats {
+    width: 100%;
+
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+
+    color: var(--text-secondary);
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+/* Telas menores que 1200px */
+
+@media (max-width: 1200px) {
+
+    .page-content {
+        gap: 24px;
+        padding-left: 24px;
+    }
+
+    .watching-video {
+        max-width: none;
+    }
+
+    .sidebar {
+        max-width: 340px;
+    }
+
+    .video-actions {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        column-gap: 24px;
+        row-gap: 12px;
+    }
+
+}
+
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    .header {
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .header-left {
+        gap: 20px;
+    }
+
+    .header-right {
+        gap: 16px;
+    }
+
+    .page-content {
+        flex-direction: column;
+
+        padding: 24px;
+    }
+
+    .watching-video {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-width: none;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+    .recommended-video {
+        width: 100%;
+    }
+
+    .thumbnail {
+        width: 45%;
+        max-width: 160px;
+    }
+
+}
+
+
+/* Celulares */
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 56px;
+
+        padding: 0 12px;
+        gap: 12px;
+    }
+
+    .header-left {
+        min-width: auto;
+        flex: 0 0 auto;
+
+        gap: 16px;
+    }
+
+    .youtube-logo {
+        width: 80px;
+    }
+
+    .youtube-symbol {
+        width: 80px;
+    }
+
+    .header-center {
+        justify-content: flex-end;
+
+        flex: 1;
+        min-width: 0;
+    }
+
+    .search-form {
+        justify-content: flex-end;
+    }
+
+    .search-input {
+        display: none;
+    }
+
+    .search-button {
+        width: 36px;
+        height: 36px;
+
+        border: none;
+        background-color: transparent;
+    }
+
+    .header-right {
+        min-width: auto;
+        flex: 0 0 auto;
+
+        gap: 12px;
+    }
+
+    .header-right .icon-button:first-child {
+        display: none;
+    }
+
+    .page-content {
+        padding: 16px 0 24px;
+        gap: 24px;
+    }
+
+    .watching-video {
+        gap: 14px;
+    }
+
+    .video-player {
+        aspect-ratio: 16 / 9;
+    }
+
+    .video-title {
+        padding: 0 12px;
+
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .video-actions {
+        padding: 0 12px;
+
+        gap: 16px;
+    }
+
+    .channel-info {
+        width: 100%;
+    }
+
+    .subscribe-button {
+        min-width: 130px;
+    }
+
+    .action-button {
+        font-size: 12px;
+    }
+
+    .video-description {
+        padding: 0 12px;
+    }
+
+    .video-description-text {
+        max-width: 100%;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 0 12px;
+    }
+
+    .recommended-video {
+        gap: 12px;
+    }
+
+    .thumbnail {
+        width: 42%;
+        height: auto;
+
+        aspect-ratio: 16 / 9;
+    }
+
+    .recommended-info {
+        gap: 6px;
+    }
+
+    .recommended-info h2 {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .recommended-channel,
+    .recommended-stats {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+}
+
+
+/* Celulares muito estreitos */
+
+@media (max-width: 380px) {
+
+    .header-left {
+        gap: 10px;
+    }
+
+    .youtube-logo {
+        width: 70px;
+    }
+
+    .youtube-symbol {
+        width: 70px;
+    }
+
+    .header-right {
+        gap: 8px;
+    }
+
+    .profile-avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .video-actions {
+        column-gap: 14px;
+    }
+
+    .thumbnail {
+        width: 40%;
+    }
+
+    .recommended-video {
+        gap: 10px;
+    }
+
+}
